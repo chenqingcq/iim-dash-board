@@ -1,6 +1,10 @@
 <template>
   <div class="dashboard-container">
     <div class="company-title">中新智擎科技有限公司</div>
+    <div class="top-flash">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
     <div class="left-bar">
       <left-bar></left-bar>
     </div>
@@ -38,6 +42,7 @@ export default {
   /*no*/
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   .company-title {
     width: 100%;
     height: 123px;
@@ -45,6 +50,23 @@ export default {
     line-height: 123px;
     text-align: center;
     color: @companyColor;
+  }
+  .top-flash {
+    width: 100%;
+    height: 130px; /*no*/
+    position: absolute;
+    top: -6px; /*no*/
+    display: flex;
+    > div {
+      flex: 1;
+      &.left {
+        transform: scaleY(-1);
+        animation: toggle_top_line 6s ease infinite reverse;
+      }
+      &.right {
+        animation: toggle_top_line 6s ease infinite;
+      }
+    }
   }
   .left-bar,
   .right-bar {
