@@ -1,6 +1,6 @@
-# iim-company-visitor-reg
+# iim-dashboard
 
-> iim-company-visitor-register-system
+> iim-dashboard
 
 ## Build Setup
 
